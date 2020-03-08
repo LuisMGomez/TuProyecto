@@ -4,9 +4,16 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/**
+ * @author Luis Manuel Gomez Gonzalez.
+ * 
+ * Pruebas para la clase ASumar.
+ * 
+ * 
+ */
 public class TestAsumar {
 
-	/* Comprobacion para numeros una cifra */
+	/** Comprobacion para numeros una cifra */
 	@Test
     public void testUnaCifra() {
         ASumar sumi = new ASumar();
@@ -33,7 +40,7 @@ public class TestAsumar {
         
     }
 	
-	/* Comprobacion para numeros negativos */
+	/** Comprobacion para numeros negativos */
 	@Test
     public void testValorNegativo() {
         ASumar sumi = new ASumar();
@@ -52,7 +59,7 @@ public class TestAsumar {
    
     }
 	
-	/* Comprobacion para numeros mayores de 9 */
+	/** Comprobacion para numeros mayores de 9 */
 	@Test
     public void testVariasCifras() {
         ASumar sumi = new ASumar();

@@ -1,11 +1,18 @@
 package sumador;
+/**
+ * @author Luis Manuel Gomez Gonzalez.
+ * Calcula el valor de la suma de todos y cada uno de los dígitos que componen un número.
+ */
 
 public class ASumar {
 
 	/**
+	 * @author Luis Manuel Gomez Gonzalez.
+	 * 
 	 * Muestra el valor de la suma de todos y cada uno de los dígitos que componen un número.
-	 * @param cad : cadena compuesta por digitos de (0-9).  
-	 * @return  : los digitos de cad separados por el simbolo + y el valor de la suma de todos sus digitos, en caso de error devuelve cadena vacia.
+	 * 
+	 * @param cad  cadena compuesta por digitos de (0-9).  
+	 * @return   los digitos de cad separados por el simbolo + y el valor de la suma de todos sus digitos, en caso de error devuelve cadena vacia.
 	 */
 	public String mostrar(String cad) {
         
@@ -41,11 +48,12 @@ public class ASumar {
         } else {
         	ok=false;
         }
+        
         // Respuesta final
         if(ok) {
-        	respuesta+=(" = "+suma);
+        	respuesta+=(" = " + suma); // Correcto
         } else {
-        	respuesta="";
+        	respuesta=""; // Ha habido algun error
         }	
         
         return respuesta;
