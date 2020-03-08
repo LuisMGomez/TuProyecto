@@ -6,6 +6,7 @@ import org.junit.Test;
 
 public class TestAsumar {
 
+	/* Comprobacion para numeros una cifra */
 	@Test
     public void testUnaCifra() {
         ASumar sumi = new ASumar();
@@ -25,14 +26,31 @@ public class TestAsumar {
         // Comprobar valor no correcto
         resultado=sumi.mostrar("x");
         assertEquals("",resultado );
-        
-        // Comprobar valor no correcto
-        resultado=sumi.mostrar("21");
-        assertEquals("",resultado );
-        
+              
         // Comprobar valor no correcto 
         resultado=sumi.mostrar("");
         assertEquals("",resultado );
+        
+    }
+	
+	/* Comprobacion para numeros negativos */
+	@Test
+    public void testValorNegativo() {
+        ASumar sumi = new ASumar();
+        
+        // Comprobar valor no correcto varias cifras
+        String resultado = sumi.mostrar("-4575");
+        assertEquals("",resultado );
+        
+        // Comprobar valor no correcto dos cifras
+        resultado = sumi.mostrar("-54");
+        assertEquals("",resultado );
+        
+        // Comprobar valor no correcto una cifra
+        resultado = sumi.mostrar("-5");
+        assertEquals("",resultado );
+        
+        
         
     }
 

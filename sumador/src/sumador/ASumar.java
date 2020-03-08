@@ -11,15 +11,19 @@ public class ASumar {
         String numero = cad;
         char digito;
                 
-        // Compruebo que la longitud es correcta =1
-        if (cad.length()==1) {
-        	digito=cad.charAt(0);
+        // Compruebo que no es un valor negativo
+        if ( cad.length()>0 && cad.charAt(0)!='-' ) {
         	
-        	// Compruebo que es un digito numerico valido
-        	if ( digito>='0' && digito<='9') {
-        		// Respuesta 
-                return (numero + " = " + numero);
-            } 
+	        // Compruebo que la longitud es correcta =1
+	        if (cad.length()==1) {
+	        	digito=cad.charAt(0);
+	        	
+	        	// Compruebo que es un digito numerico valido
+	        	if ( digito>='0' && digito<='9') {
+	        		// Respuesta 
+	                return (numero + " = " + numero);
+	            } 
+	        }
         }
         // Respuesta por fallo de formato
         return "";
