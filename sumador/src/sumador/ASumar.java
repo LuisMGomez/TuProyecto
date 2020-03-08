@@ -8,24 +8,46 @@ public class ASumar {
 	 * @return  : los digitos de cad separados por el simbolo + y el valor de la suma de todos sus digitos, en caso de error devuelve cadena vacia.
 	 */
 	public String mostrar(String cad) {
-        String numero = cad;
+        
         char digito;
-                
+        int longitud= cad.length();
+        String respuesta="";
+        int suma=0;
+        boolean ok=true;
+        int i=0;
+        
         // Compruebo que no es un valor negativo
-        if ( cad.length()>0 && cad.charAt(0)!='-' ) {
+        if ( longitud>0 && cad.charAt(0)!='-' ) {
         	
-	        // Compruebo que la longitud es correcta =1
-	        if (cad.length()==1) {
-	        	digito=cad.charAt(0);
-	        	
+	        while( i<longitud  && ok ) {
+	        	digito=cad.charAt(i);
+	       	
 	        	// Compruebo que es un digito numerico valido
 	        	if ( digito>='0' && digito<='9') {
-	        		// Respuesta 
-	                return (numero + " = " + numero);
+	        		
+	        		// Concateno la Respuesta 
+	        		respuesta+= (i==0)?"":" + ";
+	                respuesta+= (digito);
+	                
+	                // Calculo la suma
+	                suma+=(digito-'0');
+	                
+	            }else {
+	            	ok=false;
 	            } 
+	        	i++;
 	        }
+	        
+        } else {
+        	ok=false;
         }
-        // Respuesta por fallo de formato
-        return "";
+        // Respuesta final
+        if(ok) {
+        	respuesta+=(" = "+suma);
+        } else {
+        	respuesta="";
+        }	
+        
+        return respuesta;
 	}
 }

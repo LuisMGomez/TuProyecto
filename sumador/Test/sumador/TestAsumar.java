@@ -49,9 +49,27 @@ public class TestAsumar {
         // Comprobar valor no correcto una cifra
         resultado = sumi.mostrar("-5");
         assertEquals("",resultado );
-        
-        
-        
+   
     }
+	
+	/* Comprobacion para numeros mayores de 9 */
+	@Test
+    public void testVariasCifras() {
+        ASumar sumi = new ASumar();
+        
+        // Comprobar valor correcto varias cifras
+        String resultado = sumi.mostrar("4575");
+        assertEquals("4 + 5 + 7 + 5 = 21",resultado );
+        
+        // Comprobar valor correcto dos cifras
+        resultado = sumi.mostrar("54");
+        assertEquals("5 + 4 = 9",resultado );
+        
+        // Comprobar valor correcto una cifra
+        resultado = sumi.mostrar("1234567");
+        assertEquals("1 + 2 + 3 + 4 + 5 + 6 + 7 = 28",resultado );
+   
+    }
+	
 
 }
